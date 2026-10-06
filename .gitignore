@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Test / coverage artifacts
+.coverage
+coverage.json
+test_report.json
+.pytest_cache/
+
+# Build output
+build/
+*.zip
+
+# Deploy artifacts
+deploy_result.json
+
+# OS
+.DS_Store
+
+# Local tooling config
+.claude/
+.mcp.json
+

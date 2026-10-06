@@ -1,0 +1,9 @@
+apiVersion: solution.sap/v1
+kind: Solution
+metadata:
+  name: cost-center-agent-19414
+  version: "1.0.0"
+  description: "Cost Center Intelligence Agent — natural-language cost center querying for SAP S/4HANA Controlling"
+assets:
+  - ref: ./assets/cost-center-agent/asset.yaml
+  - ref: ./assets/sap-s4-ce-costcenter-0001-mcp-server/asset.yaml

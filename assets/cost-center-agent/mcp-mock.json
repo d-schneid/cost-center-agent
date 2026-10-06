@@ -1,0 +1,129 @@
+{
+  "servers": {
+    "sap-self": {
+      "mcp_server_name": "sap.mcp/sap_self",
+      "description": "MCP server for the sap_self service (SAP S/4HANA Cost Center master data, CE_COSTCENTER_0001).",
+      "tools": {
+        "list_a_costcenter_2_for_sap_self": {
+          "description": "Retrieve a list of entities from the A_CostCenter_2 collection in the sap_self service (cost center master data).",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "filter": {"type": "string", "description": "OData $filter expression"},
+              "select": {"type": "string", "description": "OData $select, comma-separated fields"},
+              "orderby": {"type": "string", "description": "OData $orderby expression"},
+              "top": {"type": "integer", "description": "Maximum number of entities to return"},
+              "skip": {"type": "integer", "description": "Number of entities to skip"},
+              "expand": {"type": "string", "description": "OData $expand navigation properties"},
+              "count": {"type": "boolean", "description": "Include inline count"}
+            },
+            "required": []
+          },
+          "mock_response": {
+            "results": [
+              {
+                "ControllingArea": "A000",
+                "CostCenter": "0010101001",
+                "CostCenterName": "Corporate IT",
+                "CostCenterDescription": "Corporate IT Services",
+                "CompanyCode": "1000",
+                "CostCenterCategory": "1",
+                "CostCenterCurrency": "USD",
+                "CostCtrResponsiblePersonName": "A. Schmidt",
+                "CostCenterCreationDate": "/Date(1704067200000)/",
+                "ValidityStartDate": "/Date(1420070400000)/",
+                "ValidityEndDate": "/Date(253402214400000)/"
+              },
+              {
+                "ControllingArea": "A000",
+                "CostCenter": "0010201002",
+                "CostCenterName": "Finance",
+                "CostCenterDescription": "Group Finance & Controlling",
+                "CompanyCode": "1000",
+                "CostCenterCategory": "1",
+                "CostCenterCurrency": "USD",
+                "CostCtrResponsiblePersonName": "B. Müller",
+                "CostCenterCreationDate": "/Date(1719792000000)/",
+                "ValidityStartDate": "/Date(1420070400000)/",
+                "ValidityEndDate": "/Date(253402214400000)/"
+              },
+              {
+                "ControllingArea": "A000",
+                "CostCenter": "0010301003",
+                "CostCenterName": "Human Resources",
+                "CostCenterDescription": "HR Shared Services",
+                "CompanyCode": "1000",
+                "CostCenterCategory": "1",
+                "CostCenterCurrency": "USD",
+                "CostCtrResponsiblePersonName": "C. Rossi",
+                "CostCenterCreationDate": "/Date(1735689600000)/",
+                "ValidityStartDate": "/Date(1420070400000)/",
+                "ValidityEndDate": "/Date(253402214400000)/"
+              },
+              {
+                "ControllingArea": "A000",
+                "CostCenter": "0010401004",
+                "CostCenterName": "Research & Development",
+                "CostCenterDescription": "R&D Engineering",
+                "CompanyCode": "1000",
+                "CostCenterCategory": "1",
+                "CostCenterCurrency": "USD",
+                "CostCtrResponsiblePersonName": "D. Novak",
+                "CostCenterCreationDate": "/Date(1746057600000)/",
+                "ValidityStartDate": "/Date(1420070400000)/",
+                "ValidityEndDate": "/Date(253402214400000)/"
+              },
+              {
+                "ControllingArea": "A000",
+                "CostCenter": "0010501005",
+                "CostCenterName": "Sales EMEA",
+                "CostCenterDescription": "Sales Region EMEA",
+                "CompanyCode": "2000",
+                "CostCenterCategory": "1",
+                "CostCenterCurrency": "EUR",
+                "CostCtrResponsiblePersonName": "E. Dubois",
+                "CostCenterCreationDate": "/Date(1756684800000)/",
+                "ValidityStartDate": "/Date(1420070400000)/",
+                "ValidityEndDate": "/Date(253402214400000)/"
+              },
+              {
+                "ControllingArea": "A000",
+                "CostCenter": "0010601006",
+                "CostCenterName": "Facilities",
+                "CostCenterDescription": "Facilities Management",
+                "CompanyCode": "2000",
+                "CostCenterCategory": "1",
+                "CostCenterCurrency": "EUR",
+                "CostCtrResponsiblePersonName": "F. Costa",
+                "CostCenterCreationDate": "/Date(1767225600000)/",
+                "ValidityStartDate": "/Date(1420070400000)/",
+                "ValidityEndDate": "/Date(253402214400000)/"
+              }
+            ]
+          }
+        },
+        "count_a_costcenter_2_for_sap_self": {
+          "description": "Get the total count of entities in the A_CostCenter_2 collection in the sap_self service.",
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "filter": {"type": "string", "description": "OData $filter expression to count only matching entities"}
+            },
+            "required": []
+          },
+          "mock_response": 142
+        }
+      }
+    }
+  },
+  "metadata": {
+    "version": "1.0.0",
+    "created_for_agent": "cost-center-agent",
+    "mock_mode": true,
+    "deterministic": true,
+    "total_servers": 1,
+    "total_tools": 2,
+    "generated_from": ["translation.json"],
+    "generation_date": "2026-10-06"
+  }
+}
